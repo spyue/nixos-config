@@ -12,5 +12,6 @@
     unzip 
     nodejs
     nixd
+    jdk
   ];
 }
