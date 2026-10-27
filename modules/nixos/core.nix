@@ -1,0 +1,40 @@
+{pkgs, ...}:
+
+{
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nixpkgs.config.allowUnfree = true;
+
+  networking.networkmanager.enable = true;
+
+  time.timeZone = "America/Halifax";
+  i18n.defaultLocale = "en_CA.UTF-8";
+
+  users.users.spyue = {
+    isNormalUser = true;
+    description = "spyue";
+    extraGroups = ["networkmanager" "wheel"];
+  };
+
+  #enables printing (CUPS)
+  services.printing.enable = true;
+
+  #system wide nvim (sudo)
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+  };
+
+  #allows downloading of binaries like mason in lazy or pip 
+  programs.nix-ld.enable = true;
+
+  programs.ssh.startAgent = true;
+
+  #minimal for root and recovery, everything else in home-manager
+  environment.systemPackages = with pkgs; [
+    git 
+    wget 
+    curl 
+  ];
+}
