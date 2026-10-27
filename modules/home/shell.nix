@@ -4,10 +4,19 @@
     enable = true;
 
     shellAliases = {
+    #nix commands
       #rebuilds the current machine (if hostname matches flake.nix)
       rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config/";
       #pull newest packages and rebuild (updates current machine)
       update = "nix flake update --flake ~/nixos-config && sudo nixos-rebuild switch --flake ~/nixos-config/";
+
+    #audio commands
+      #mutes system
+      mute = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+      #setvolume use = setVol x%
+      setVol = "wpctl set-volume @DEFAULT_AUDIO_SINK@";
+      #checks volume 
+      checkVol = "wpctl get-volume @DEFAULT_AUDIO_SINK@";
     };
 
     #ps1 line. controls how the prompt line looks in terminal
