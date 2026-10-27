@@ -4,6 +4,7 @@
     ./core.nix
     ./desktop.nix
     ./audio.nix 
+    ./gaming.nix
   ];
 }
 
