@@ -5,6 +5,7 @@
     ./packages/apps.nix
     ./packages/dev.nix
     ./packages/school.nix
+    ./packages/media.nix
     ./shell.nix
     ./git.nix
     ./dotfiles.nix
