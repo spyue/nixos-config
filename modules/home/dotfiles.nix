@@ -12,5 +12,6 @@ in
     "kitty".source = link "kitty";
     "fastfetch".source = link "fastfetch";
     "nvim".source = link "nvim";
+    "musikcube/hotkeys.json".source = link "musikcube/hotkeys.json";
   };
 }
