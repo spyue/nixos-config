@@ -7,5 +7,6 @@
     vlc 
     musikcube
     kid3
+    ani-cli
   ];
 }
