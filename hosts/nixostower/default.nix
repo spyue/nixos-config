@@ -12,6 +12,8 @@
   #put the bootloader settings from generated conf on desktop 
 
 
+  #luks settings
+
   #loading graphics driver
   hardware.amdgpu.initrd.enable = true;
   hardware.graphics = {
