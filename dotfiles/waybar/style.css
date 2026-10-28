@@ -1,0 +1,108 @@
+/* ================================================= */
+/* Static minimal pill bar - cool blue               */
+/* based on github.com/shivam-salkar                 */
+/* minimal-waybar-config, display-only for NixOS     */
+/* ================================================= */
+
+/* Palette: change these to recolor the whole bar */
+@define-color bg        #0f1c2e;  /* deep blue pill background */
+@define-color border    #1e3a5f;  /* subtle pill outline */
+@define-color fg        #d6e6f5;  /* icy main text */
+@define-color muted     #8fb3d6;  /* inactive workspaces */
+@define-color accent    #6cb6eb;  /* sky blue: active workspace */
+@define-color nixblue   #7ebae4;  /* NixOS logo blue */
+@define-color warning   #f0c674;  /* low battery */
+@define-color critical  #e06c75;  /* very low battery */
+
+* {
+    font-family: "JetbrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* Main Waybar window (transparent, pills handle bg) */
+window#waybar {
+    background: transparent;
+    color: @fg;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+}
+
+/* Containers for left / center / right modules */
+.modules-left,
+.modules-center,
+.modules-right {
+    background: @bg;
+    border: 1px solid @border;
+    margin: 3px 6px;
+    padding: 0 5px;
+    border-radius: 100px;
+}
+
+.modules-left {
+    padding: 0;
+}
+
+.modules-center {
+    padding: 0 10px;
+}
+
+/* Shared styling for the info modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio {
+    padding: 0 6px;
+    border-radius: 100px;
+    color: @fg;
+}
+
+/* Workspace indicators */
+#workspaces button {
+    background: transparent;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+    font-weight: 900;
+    font-size: 10pt;
+    color: @muted;
+    border: none;
+    border-radius: 100px;
+}
+
+/* Active workspace pill */
+#workspaces button.active {
+    background: @accent;
+    color: @bg;
+}
+
+/* Keep workspaces looking the same under the mouse */
+#workspaces button:hover {
+    background: transparent;
+    color: @muted;
+    box-shadow: none;
+}
+
+#workspaces button.active:hover {
+    background: @accent;
+    color: @bg;
+}
+
+/* NixOS logo */
+#custom-nixos {
+    margin-left: 5px;
+    padding: 0 6px;
+    font-size: 16px;
+    color: @nixblue;
+}
+
+/* Low battery warnings */
+#battery.warning {
+    color: @warning;
+}
+
+#battery.critical {
+    color: @critical;
+}

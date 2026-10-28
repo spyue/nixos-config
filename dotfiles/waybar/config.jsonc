@@ -1,0 +1,32 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+
+    // Left side
+    "modules-left": [
+        "custom/nixos",
+        "hyprland/workspaces"
+    ],
+
+    // Center
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    // Right side: display only, nothing clickable
+    "modules-right": [
+        "pulseaudio",
+        "network",
+//        "cpu",
+//        "memory",
+        "battery",
+        "clock"
+    ],
+
+    // Load module definitions
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

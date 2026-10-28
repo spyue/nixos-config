@@ -13,5 +13,6 @@ in
     "fastfetch".source = link "fastfetch";
     "nvim".source = link "nvim";
     "musikcube/hotkeys.json".source = link "musikcube/hotkeys.json";
+    "waybar".source = link "waybar";
   };
 }

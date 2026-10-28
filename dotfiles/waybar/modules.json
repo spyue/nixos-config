@@ -1,0 +1,67 @@
+{
+    "custom/nixos": {
+        "format": "",
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}"
+    },
+    "hyprland/window": {
+        "format": "   {}",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "M",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "tooltip": false,
+        "on-scroll-up": "",
+        "on-scroll-down": ""
+    },
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "",
+        "format-disconnected": "⚠",
+        "interval": 5,
+        "tooltip": false
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 5,
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {percentage}%",
+        "interval": 5,
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tooltip": false
+    },
+    "clock": {
+        "format": " {:%I:%M %p    %e %B}",
+        "tooltip": false
+    }
+}
