@@ -3,16 +3,17 @@
   "source": "redstar",
   "padding": { "right": 2 },
   "color": {
-    "1": "38;2;137;186;122",
-    "2": "38;2;155;230;134"
+    "1": "blue",
+    "2": "cyan",
+    "3": "magenta"
   }
 },
 
   "display": {
   "separator": "  ",
   "color": {
-    "keys": "38;2;137;186;122",
-    "title": "38;2;155;230;134"
+    "keys": "blue",
+    "title": "magenta"
   }
 },
 

@@ -51,7 +51,8 @@ local menu = "hyprlauncher"
 hl.on("hyprland.start", function()
 	--   hl.exec_cmd(terminal)
 	--   hl.exec_cmd("nm-applet")
-	hl.exec_cmd("waybar & hyprpaper")
+	hl.exec_cmd("waybar & awww-daemon")
+	hl.exec_cmd("qs -c wallpicker")
 end)
 
 -------------------------------
@@ -135,6 +136,8 @@ hl.config({
 		enabled = true,
 	},
 })
+
+pcall(require, "colors")
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
@@ -325,6 +328,9 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
+-- Quickshell wallpaper picker
+hl.bind(mainMod .. "+ W", hl.dsp.exec_cmd("qs -c wallpicker ipc call picker toggle"))
+
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
@@ -333,6 +339,8 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
 -- Example window rules that are useful
+
+--quickshell wallpicker window rule
 
 local suppressMaximizeRule = hl.window_rule({
 	-- Ignore maximize requests from all apps. You'll probably like this.
@@ -359,6 +367,9 @@ hl.window_rule({
 })
 
 -- Layer rules also return a handle.
+--quickshell layer rule
+hl.layer_rule({ match = { namespace = "wallpicker" }, blur = true })
+--
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
 --     match = { namespace = "^my-overlay$" },

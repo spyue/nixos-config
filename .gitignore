@@ -1,1 +1,4 @@
 result
+dotfiles/waybar/colors.css
+dotfiles/kitty/colors.conf
+dotfiles/hypr/colors.lua

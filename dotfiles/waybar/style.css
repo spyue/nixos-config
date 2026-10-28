@@ -4,15 +4,7 @@
 /* minimal-waybar-config, display-only for NixOS     */
 /* ================================================= */
 
-/* Palette: change these to recolor the whole bar */
-@define-color bg        #0f1c2e;  /* deep blue pill background */
-@define-color border    #1e3a5f;  /* subtle pill outline */
-@define-color fg        #d6e6f5;  /* icy main text */
-@define-color muted     #8fb3d6;  /* inactive workspaces */
-@define-color accent    #6cb6eb;  /* sky blue: active workspace */
-@define-color nixblue   #7ebae4;  /* NixOS logo blue */
-@define-color warning   #f0c674;  /* low battery */
-@define-color critical  #e06c75;  /* very low battery */
+@import "colors.css";
 
 * {
     font-family: "JetbrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
