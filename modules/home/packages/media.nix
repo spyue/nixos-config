@@ -6,5 +6,6 @@
     lmms 
     vlc 
     musikcube
+    kid3
   ];
 }
