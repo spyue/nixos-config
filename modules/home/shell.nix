@@ -21,7 +21,7 @@
 
     #ps1 line. controls how the prompt line looks in terminal
     initExtra = ''
-      PS1='\[\e[38;2;137;186;122m\]\u@\h\[\e[38;5;137m\]:\[\e[1;38;5;173m\]\w\[\e[0m\] \[\e[38;5;179m\]\$\[\e[0m\] '
+      PS1='\[\e[34m\]\u@\h\[\e[90m\]:\[\e[1;35m\]\w\[\e[0m\] \[\e[36m\]\$\[\e[0m\] '
       fastfetch
     '';
   };

@@ -14,5 +14,7 @@ in
     "nvim".source = link "nvim";
     "musikcube/hotkeys.json".source = link "musikcube/hotkeys.json";
     "waybar".source = link "waybar";
+    "quickshell".source = link "quickshell";
+    "matugen".source = link "matugen";
   };
 }

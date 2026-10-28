@@ -18,5 +18,8 @@
     pavucontrol
     kdePackages.dolphin
     bibata-cursors
+    quickshell
+    awww
+    matugen
   ];
 }
