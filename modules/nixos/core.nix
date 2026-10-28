@@ -26,6 +26,12 @@
     vimAlias = true;
   };
 
+  #localsend 
+  programs.localsend = {
+    enable = true; 
+    openFirewall = true; 
+  };
+
   #allows downloading of binaries like mason in lazy or pip 
   programs.nix-ld.enable = true;
 
