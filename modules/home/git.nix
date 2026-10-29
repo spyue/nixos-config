@@ -4,7 +4,7 @@
     enable = true;
     settings.user = {
       name = "spyue";
-      email = "spyue@proton.me";
+      email = "183024207+spyue@users.noreply.github.com";
     };
   };
 }
