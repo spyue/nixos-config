@@ -17,6 +17,7 @@
   };
 
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.SAL_USE_VCLPLUGIN = "gtk3";
 
   security.polkit.enable = true;
   programs.dconf.enable = true; #lets GTK apps get cursor/theme settings

@@ -14,7 +14,4 @@
     color-scheme = "prefer-dark";
     gtk-theme = "adw-gtk3-dark";
   };
-
-  # Makes sure LibreOffice uses GTK (so it follows these colors)
-  home.sessionVariables.SAL_USE_VCLPLUGIN = "gtk3";
 }

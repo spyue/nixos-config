@@ -7,7 +7,6 @@
     wofi 
     waybar
     mako 
-    hyprpaper
     hyprlock
     hypridle
     hyprpolkitagent
