@@ -9,6 +9,7 @@
     ./shell.nix
     ./git.nix
     ./dotfiles.nix
+    ./theme.nix
   ];
 
   home.username = "spyue";

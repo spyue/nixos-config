@@ -3,19 +3,33 @@
 [templates.waybar]
 input_path = '~/nixos-config/dotfiles/matugen/templates/waybar-colors.css'
 output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill -SIGUSR2 waybar'
+post_hook = 'pkill -SIGUSR2 waybar || true'
 
 [templates.kitty]
 input_path = '~/nixos-config/dotfiles/matugen/templates/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
-post_hook = 'pkill -SIGUSR1 kitty'
+post_hook = 'pkill -SIGUSR1 kitty || true'
 
 [templates.hyprland]
 input_path = '~/nixos-config/dotfiles/matugen/templates/hyprland-colors.lua'
 output_path = '~/.config/hypr/colors.lua'
-post_hook = 'hyprctl reload'
+post_hook = 'hyprctl reload || true'
 
 [templates.nvim]
 input_path = '~/.config/matugen/templates/nvim-colors.lua'
 output_path = '~/.config/nvim/matugen-colors.lua'
-post_hook = 'pkill -SIGUSR1 nvim'
+post_hook = 'pkill -SIGUSR1 nvim || true'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+post_hook = '~/.config/matugen/reload-gtk.sh || true'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywal-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update || true'

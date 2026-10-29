@@ -9,5 +9,6 @@
     hunspellDicts.en_US
     fastfetch
     kdePackages.kate
+    pywalfox-native
   ];
 }
