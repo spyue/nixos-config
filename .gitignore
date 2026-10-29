@@ -3,3 +3,4 @@ dotfiles/waybar/colors.css
 dotfiles/kitty/colors.conf
 dotfiles/hypr/colors.lua
 dotfiles/nvim/matugen-colors.lua
+dotfiles/wofi/colors.css

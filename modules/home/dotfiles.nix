@@ -16,5 +16,6 @@ in
     "waybar".source = link "waybar";
     "quickshell".source = link "quickshell";
     "matugen".source = link "matugen";
+    "wofi".source = link "wofi";
   };
 }

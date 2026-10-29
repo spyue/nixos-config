@@ -52,7 +52,7 @@ hl.monitor({
 -- Set programs that you use
 local terminal = "kitty"
 local fileManager = "dolphin"
-local menu = "hyprlauncher"
+local menu = "wofi --show drun"
 
 -------------------
 ---- AUTOSTART ----
@@ -384,6 +384,7 @@ hl.window_rule({
 -- Layer rules also return a handle.
 --quickshell layer rule
 hl.layer_rule({ match = { namespace = "wallpicker" }, blur = true })
+hl.layer_rule({ match = { namespace = "wofi" }, blur = true })
 --
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",

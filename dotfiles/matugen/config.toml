@@ -36,3 +36,7 @@ post_hook = 'pywalfox update || true'
 [templates.vesktop]
 input_path = '~/.config/matugen/templates/midnight-discord.css'
 output_path = '~/.config/vesktop/themes/midnight-discord.css'
+
+[templates.wofi]
+input_path = '~/.config/matugen/templates/wofi-colors.css'
+output_path = '~/.config/wofi/colors.css'

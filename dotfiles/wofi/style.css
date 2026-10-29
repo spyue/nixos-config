@@ -1,0 +1,50 @@
+@import "colors.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+}
+
+window {
+  background-color: alpha(@bg, 0.95);
+  border: 2px solid @border;
+  border-radius: 16px;
+}
+
+#outer-box {
+  padding: 14px;
+}
+
+#input {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: @bg_alt;
+  color: @fg;
+  box-shadow: none;
+}
+
+#inner-box,
+#scroll {
+  background: transparent;
+}
+
+#entry {
+  padding: 6px 10px;
+  border-radius: 10px;
+  outline: none;
+}
+
+#entry:selected {
+  background-color: @accent;
+}
+
+#text {
+  color: @fg;
+  margin-left: 8px;
+}
+
+#entry:selected #text {
+  color: @on_accent;
+}

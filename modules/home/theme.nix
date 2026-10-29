@@ -7,6 +7,10 @@
       name = "adw-gtk3-dark";
       package = pkgs.adw-gtk3;
     };
+     iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+  };
   };
 
   # Tells apps and websites you prefer dark mode
