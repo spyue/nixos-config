@@ -8,6 +8,14 @@
     "3": "magenta"
   }
 },
+  // "logo": {
+  //   "source": "nixos_small",
+  //   "padding": { "right": 2 },
+  //   "color": {
+  //     "1": "blue",
+  //     "2": "cyan"
+  //   }
+  // },
 
   "display": {
   "separator": "  ",
