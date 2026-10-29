@@ -175,6 +175,7 @@ ShellRoot {
         delegate: Item {
           id: thumb
           required property string filePath
+          required property url fileUrl
           width: 480
           height: 300
 
@@ -194,7 +195,7 @@ ShellRoot {
 
             Image {
               anchors.fill: parent
-              source: "file://" + thumb.filePath
+              source: thumb.fileUrl
               sourceSize.width: 600
               fillMode: Image.PreserveAspectCrop
               asynchronous: true
