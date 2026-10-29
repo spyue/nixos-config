@@ -29,7 +29,7 @@
     imports = [../../modules/home];
 
     home.packages = with pkgs; [
-      discord 
+      vesktop 
       prismlauncher
     ];
   };

@@ -32,3 +32,7 @@ output_path = '~/.config/gtk-4.0/gtk.css'
 input_path = '~/.config/matugen/templates/pywal-colors.json'
 output_path = '~/.cache/wal/colors.json'
 post_hook = 'pywalfox update || true'
+
+[templates.vesktop]
+input_path = '~/.config/matugen/templates/midnight-discord.css'
+output_path = '~/.config/vesktop/themes/midnight-discord.css'
