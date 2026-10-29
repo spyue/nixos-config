@@ -30,6 +30,21 @@ hl.monitor({
 	scale = "auto",
 })
 
+-- Desktop monitor
+hl.monitor({
+	output = "desc:Acer Technologies 22CX1Q A0VAA0013P00",
+	mode = "1920x1080@60",
+	position = "0x0",
+	scale = 1,
+	transform = 1,
+})
+hl.monitor({
+	output = "desc:ASUSTek COMPUTER INC VG279QM1A T4LMQS040416",
+	mode = "1920x1080@280",
+	position = "1080x420",
+	scale = 1,
+})
+
 ---------------------
 ---- MY PROGRAMS ----
 ---------------------

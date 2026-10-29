@@ -9,6 +9,9 @@ import Qt.labs.folderlistmodel
 ShellRoot {
   id: root 
   property bool open: false 
+
+  onOpenChanged: if (open) previewDelay.restart()
+
   //Directory for wallpapers
   property string wallDir: Quickshell.env("HOME") + "/nixos-config/dotfiles/hypr/wallpapers"
 
@@ -27,6 +30,57 @@ ShellRoot {
     id: genColors
     property string path: ""
     command: ["matugen", "image", path, "-m", "dark", "--source-color-index", "0"]
+  }
+
+    // The tint shown behind the belt; starts as a soft dark overlay
+  property color tint: "#33000000"
+  // Remembers each wallpaper's color so revisiting is instant
+  property var tintCache: ({})
+
+  // Asks matugen for a wallpaper's palette without touching any files
+  Process {
+    id: previewColor
+    property string path: ""
+    command: ["matugen", "--dry-run", "image", path, "--json", "hex",
+              "-m", "dark", "--source-color-index", "0"]
+    stdout: StdioCollector {
+      onStreamFinished: {
+        const hex = root.primaryFromJson(this.text)
+        if (hex) {
+          root.tintCache[previewColor.path] = hex
+          root.tint = "#55" + hex.slice(1, 7)
+        }
+      }
+    }
+  }
+
+  // Waits for the selection to settle before asking matugen
+  Timer {
+    id: previewDelay
+    interval: 150
+    onTriggered: {
+      const path = belt.currentItem ? belt.currentItem.filePath : ""
+      if (!path) return
+      if (root.tintCache[path]) {
+        root.tint = "#55" + root.tintCache[path].slice(1, 7)
+        return
+      }
+      previewColor.running = false
+      previewColor.path = path
+      previewColor.running = true
+    }
+  }
+
+  // Pulls the dark-mode primary color out of matugen's JSON
+  function primaryFromJson(text: string): string {
+    try {
+      const c = JSON.parse(text).colors
+      if (c.primary && c.primary.dark) return c.primary.dark.color || c.primary.dark
+      if (c.dark && c.dark.primary) return c.dark.primary
+      if (c.primary && c.primary.default) return c.primary.default.color || c.primary.default
+    } catch (e) {}
+    console.log("couldn't find primary in matugen output:", text.slice(0, 300))
+    return ""
   }
 
   function apply(path: string): void {
@@ -52,12 +106,18 @@ ShellRoot {
   PanelWindow {
     visible: root.open 
     anchors {left: true; right: true; top: true; bottom: true}
-    color: "#660f1c2e"
+    color: "transparent"
     exclusionMode: ExclusionMode.Ignore
 
     WlrLayershell.namespace: "wallpicker"
     WlrLayershell.layer: WlrLayer.Overlay
     WlrLayershell.keyboardFocus: WlrKeyboardFocus.Exclusive  
+
+    Rectangle {
+      anchors.fill: parent
+      color: root.tint
+      Behavior on color { ColorAnimation { duration: 300 } }
+    }
 
      PathView {
         id: belt
@@ -108,6 +168,9 @@ ShellRoot {
           else if (event.key === Qt.Key_L) {belt.incrementCurrentIndex(); event.accepted = true}
           else if (event.key === Qt.Key_Return) {root.apply(belt.currentItem.filePath); event.accepted = true}
         }
+
+        // trigger timer
+        onCurrentIndexChanged: previewDelay.restart()
 
         delegate: Item {
           id: thumb
