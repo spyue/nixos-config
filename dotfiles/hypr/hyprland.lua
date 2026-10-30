@@ -346,6 +346,8 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- Quickshell wallpaper picker
 hl.bind(mainMod .. "+ W", hl.dsp.exec_cmd("qs -c wallpicker ipc call picker toggle"))
 
+-- lock key
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------

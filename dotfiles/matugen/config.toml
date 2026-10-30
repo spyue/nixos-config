@@ -40,3 +40,7 @@ output_path = '~/.config/vesktop/themes/midnight-discord.css'
 [templates.wofi]
 input_path = '~/.config/matugen/templates/wofi-colors.css'
 output_path = '~/.config/wofi/colors.css'
+
+[templates.hyprlock]
+input_path = '~/.config/matugen/templates/hyprlock-colors.conf'
+output_path = '~/.config/hypr/hyprlock-colors.conf'
