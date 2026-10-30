@@ -44,3 +44,7 @@ output_path = '~/.config/wofi/colors.css'
 [templates.hyprlock]
 input_path = '~/.config/matugen/templates/hyprlock-colors.conf'
 output_path = '~/.config/hypr/hyprlock-colors.conf'
+
+[templates.musikcube]
+input_path = '~/.config/matugen/templates/musikcube-theme.json'
+output_path = '~/.config/musikcube/themes/matugen.json'
