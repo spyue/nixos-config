@@ -12,7 +12,7 @@
   users.users.spyue = {
     isNormalUser = true;
     description = "spyue";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "wireshark"];
   };
 
   #enables printing (CUPS)
@@ -30,6 +30,12 @@
   programs.localsend = {
     enable = true; 
     openFirewall = true; 
+  };
+
+  #wireshark
+  programs.wireshark = {
+    enable = true;
+    package = pkgs.wireshark;
   };
 
   #allows downloading of binaries like mason in lazy or pip 
