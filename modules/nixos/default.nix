@@ -5,6 +5,7 @@
     ./desktop.nix
     ./audio.nix 
     ./gaming.nix
+    ./boot.nix
   ];
 }
 
