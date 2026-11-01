@@ -9,6 +9,11 @@
   };
 
   services.displayManager.sddm.enable = true;
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "spyue";
+  };
+  services.displayManager.defaultSession = "hyprland";
 
   programs.hyprland = {
     enable = true;
