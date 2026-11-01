@@ -24,6 +24,15 @@
     enable32Bit = true;
   };
 
+  #OBS setup
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+    plugins = with pkgs.obs-studio-plugins; [
+      obs-pipewire-audio-capture
+    ];
+  };
+
   #tower specific packages
   home-manager.users.spyue = {pkgs, ...}: {
     imports = [../../modules/home];
@@ -31,6 +40,7 @@
     home.packages = with pkgs; [
       vesktop 
       prismlauncher
+      kdePackages.kdenlive
     ];
   };
 
