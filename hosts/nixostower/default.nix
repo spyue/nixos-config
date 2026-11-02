@@ -44,6 +44,7 @@
       kdePackages.kdenlive
       shipwright
       dolphin-emu
+      osu-lazer-bin
     ];
   };
 
