@@ -42,6 +42,8 @@
       prismlauncher
       deadlock-mod-manager
       kdePackages.kdenlive
+      shipwright
+      dolphin-emu
     ];
   };
 
