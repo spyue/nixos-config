@@ -13,10 +13,8 @@
   boot = {
     plymouth = {
       enable = true;
-      theme = "rings";
-      themePackages = [
-        (pkgs.adi1090x-plymouth-themes.override { selected_themes = [ "rings" ]; })
-      ];
+      theme = "nixos-bgrt";
+      themePackages = [ pkgs.nixos-bgrt-plymouth ];
     };
     initrd.systemd.enable = true;        # lets Plymouth draw the disk password prompt
     consoleLogLevel = 3;
