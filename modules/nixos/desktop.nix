@@ -14,6 +14,7 @@
     user = "spyue";
   };
   services.displayManager.defaultSession = "hyprland";
+  programs.hyprlock.enable = true;
 
   programs.hyprland = {
     enable = true;

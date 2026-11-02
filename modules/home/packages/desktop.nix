@@ -7,7 +7,6 @@
     wofi 
     waybar
     mako 
-    hyprlock
     hypridle
     hyprpolkitagent
     grim

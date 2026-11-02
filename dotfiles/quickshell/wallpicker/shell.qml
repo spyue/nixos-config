@@ -53,12 +53,21 @@ ShellRoot {
     command: ["matugen", "image", path, "-m", "dark", "--source-color-index", "0"]
   }
 
+    // Keeps ~/.cache/current-wallpaper pointing at the chosen wallpaper
+  Process {
+    id: saveCurrent
+    property string path: ""
+    command: ["ln", "-sf", path, Quickshell.env("HOME") + "/.cache/current-wallpaper"]
+  }
+
   function apply(path: string): void {
     setWallpaper.path = path
     setWallpaper.running = true
     genColors.path = path
     genColors.running = true
     root.open = false
+    saveCurrent.path = path
+    saveCurrent.running = true
   }
 
   // ---------- Background tint preview (browsing) ----------
