@@ -40,6 +40,7 @@
     home.packages = with pkgs; [
       vesktop 
       prismlauncher
+      deadlock-mod-manager
       kdePackages.kdenlive
     ];
   };
