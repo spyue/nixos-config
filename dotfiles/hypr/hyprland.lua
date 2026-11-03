@@ -349,6 +349,12 @@ hl.bind(mainMod .. "+ W", hl.dsp.exec_cmd("qs -c wallpicker ipc call picker togg
 
 -- lock key
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
+
+-- Screenshot key
+hl.bind(
+	mainMod .. " + SHIFT + P",
+	hl.dsp.exec_cmd([[sh -c 'grim -g "$(slurp)" ~/Pictures/screenshots/$(date +%F_%H-%M-%S).png']])
+)
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
