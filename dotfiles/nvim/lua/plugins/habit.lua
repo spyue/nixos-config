@@ -2,18 +2,9 @@ return {
   {
     "spyue/habit.nvim",
     dev = true,
-    cmd = "HabitInsert",
+    ft = "markdown",
     opts = {
-      tasks = { "task 1", "task 2", "task 3" },
-    },
-    keys = {
-      {
-        "<leader>ht",
-        function()
-          require("habit").insert()
-        end,
-        desc = "Insert habit tracker",
-      },
+      tasks = { "Study (2 hours)", "Study French (30 mins)", "Work on Project" },
     },
   },
 }
