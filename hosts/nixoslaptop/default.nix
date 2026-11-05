@@ -22,7 +22,7 @@
       imports = [../../modules/home];
 
       home.packages = with pkgs; [
-      #any laptop specific packages go here 
+        brightnessctl
 
 
       ];
