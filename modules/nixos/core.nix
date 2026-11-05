@@ -18,6 +18,9 @@
   #enables printing (CUPS)
   services.printing.enable = true;
 
+  #tailscale
+  services.tailscale.enable = true;
+
   #system wide nvim (sudo)
   programs.neovim = {
     enable = true;
