@@ -2,6 +2,8 @@
 {pkgs, ...}:
 
 {
+  programs.java.enable = true;
+
   home.packages = with pkgs; [
     gcc 
     gnumake
@@ -14,5 +16,13 @@
     nixd
     jdk
     dnsutils
+
+    (python3.withPackages (ps: with ps; [
+      matplotlib
+      numpy
+      mss
+      pillow
+      pytesseract
+    ])) 
   ];
 }

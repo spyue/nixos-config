@@ -2,12 +2,7 @@
 {pkgs, pkgs-2505, ...}: 
 
 {
-  home.packages = with pkgs; [
-    (python3.withPackages (ps: with ps; [
-      matplotlib
-      numpy
-    ]))
-
+  home.packages = with pkgs; [ 
     #from 25.05 until quarto is fixed (syntax-highlighting bug)
     (pkgs-2505.quarto.override {
       extraPythonPackages = ps: with ps; [numpy matplotlib];
