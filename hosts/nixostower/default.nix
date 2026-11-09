@@ -38,6 +38,8 @@
     imports = [../../modules/home];
 
     home.packages = with pkgs; [
+      (btop.override { rocmSupport = true; })
+
       vesktop 
       prismlauncher
       deadlock-mod-manager

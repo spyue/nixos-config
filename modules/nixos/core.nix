@@ -15,6 +15,10 @@
     extraGroups = ["networkmanager" "wheel" "wireshark"];
   };
 
+  boot.extraModprobeConfig = ''
+    options iwlmvm power_scheme=1
+  '';
+
   #enables printing (CUPS)
   services.printing.enable = true;
 
