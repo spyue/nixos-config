@@ -24,5 +24,8 @@
       pillow
       pytesseract
     ])) 
+
+    #game dev
+    godot
   ];
 }
