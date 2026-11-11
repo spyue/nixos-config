@@ -26,6 +26,7 @@
     ])) 
 
     #game dev
-    godot
+    godot-mono
+    dotnet-sdk_8
   ];
 }
