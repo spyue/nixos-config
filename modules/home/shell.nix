@@ -1,5 +1,7 @@
 #Bash: prompt, fastfetch, and aliases (replaces ~/.bashrc)
 {
+  home.sessionPath = [ "$HOME/.local/bin" ];
+
   programs.bash = {
     enable = true;
 
