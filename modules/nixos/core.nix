@@ -4,6 +4,9 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
+  #git ssh token holder
+  programs.ssh.startAgent = true;
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "America/Halifax";
@@ -47,8 +50,6 @@
 
   #allows downloading of binaries like mason in lazy or pip 
   programs.nix-ld.enable = true;
-
-  programs.ssh.startAgent = true;
 
   #minimal for root and recovery, everything else in home-manager
   environment.systemPackages = with pkgs; [
