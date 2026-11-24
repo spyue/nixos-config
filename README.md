@@ -21,15 +21,22 @@ screenshot of desktop
 
 ## File Structure
 
-. \
-|-- flake.nix \
-| \
-|-- hosts/ \
-| |-- nixoslaptop/ \
-| |-- nixostower/ \
-| \
-|-- modules/ \
-| |-- nixos/ \
-| |-- home/ \
-| \
-|-- dotfiles/
+```
+.
+├── dotfiles
+│   ├── fastfetch
+│   ├── hypr
+│   ├── kitty
+│   ├── matugen
+│   ├── musikcube
+│   ├── nvim
+│   ├── quickshell
+│   ├── waybar
+│   └── wofi
+├── hosts
+│   ├── nixoslaptop
+│   └── nixostower
+└── modules
+    ├── home
+    └── nixos
+```
