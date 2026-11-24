@@ -70,6 +70,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("mako")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	hl.exec_cmd("qs -c wallpicker")
+	hl.exec_cmd("xrandr --output DP-1 --primary")
 end)
 
 -------------------------------

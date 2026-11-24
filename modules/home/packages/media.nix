@@ -9,5 +9,9 @@
     kid3
     ani-cli
     krita
+
+  #music
+    ffmpeg
+    yt-dlp
   ];
 }

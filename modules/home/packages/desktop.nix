@@ -19,5 +19,6 @@
     quickshell
     awww
     matugen
+    xorg.xrandr
   ];
 }
