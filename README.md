@@ -33,7 +33,3 @@ screenshot of desktop
 | |-- home/ \
 | \
 |-- dotfiles/
-
-```
-
-```
