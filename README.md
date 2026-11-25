@@ -72,5 +72,41 @@ Super+W ──► Quickshell picker ──► Enter
                                                              hyprlock, ...
                                     │
                     post-hooks tell running apps to reload
+```
+
+## Problems Throughout The Switch To Linux (NixOS)
+
+Throughout the process of switching from Windows 11 for work, school, gaming, devwork, etc... I encountered a few issues (allbeit mainly on the desktop with gaming). That being said the process is actually pretty quick and I would totally recommend.
+
+**Slow wifi on pc:** my link to my wifi in my apartment seemed pretty stable sitting at around 63 dBm on multiple devices but I was getting download speeds under 10 Mbps. After testing each band it became apparent that it was a channel specific issue. I just switched to 2.4G on my desktop and now have almost perfectly stable connections (cross my fingers) with the only problem being still semi slow download rates. Overall I got to fix my issue of unstable connection during calls/games but unfortunately I will have to live with slow internet as unless I spend money or drill holes in the floor it's out of my control.
+
+**Games Ignoring mouse:** Proton games were treating the wrong monitor as primary causing my mouse to hover on my screen while tabbed into a game. This was a relatively simple fix, all i had to do was set the primary monitor explicitly upon login.
+
+## Usage
+
+The setup I have is tailored to my needs and things I like. If you want to use them I suggest cleaning it up to tailor your needs better but if you want to just clone my setup go for it.
+
+First clone the repo (keep name as nixos-config) then use either of the following commands:
+
+- gaming uses my tower settings that I use on my gaming pc but still comes with most of the dev specific stuff I have on laptop
+- school/work uses my laptop settings which exclude things like vesktop(discord) and some other things
+
+**Gaming**
 
 ```
+sudo nixos-rebuild switch --flake .#nixostower
+```
+
+**School/Work**
+
+```
+sudo nixos-rebuild switch --flake .#nixoslaptop
+```
+
+## Credits
+
+- [matugen](https://github.com/InioX/matugen) and [matugen-themes](https://github.com/InioX/matugen-themes) for palette generation and templates
+
+## License
+
+MIT
