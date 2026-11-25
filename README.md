@@ -2,7 +2,7 @@
 
 ![Desktop Screenshot](screenshots/desktopSC.png)
 
-This is my NixOS setup, keep in mind it is my first time using Linux other than a brief stint with Debian. Some things to note are there are wallpapers in here that are not mine, almost all of them are from wallhaven.cc. Take a look around and let me know if you have any suggestions or questions @spyue@proton.me or on discord @spyue. (I will eventually update this README to include more info)
+This is my NixOS setup, keep in mind it is my first time using Linux other than a brief stint with Debian. Almost all of the wallpapers are from wallhaven.cc. Take a look around and let me know if you have any suggestions or questions @spyue@proton.me or on discord @spyue. (I will eventually update this README to include more info)
 
 ## Basic Outline
 
@@ -96,16 +96,23 @@ First clone the repo (keep name as nixos-config) then use either of the followin
 - gaming uses my tower settings that I use on my gaming pc but still comes with most of the dev specific stuff I have on laptop
 - school/work uses my laptop settings which exclude things like vesktop(discord) and some other things
 
+1. Replace a host's hardware-configuration.nix with your own
+   (from /etc/nixos/hardware-configuration.nix), and update its disk encryption lines.
+2. Change the username, home directory, and git details to your own
+   (modules/nixos/core.nix, modules/home/default.nix, modules/home/git.nix,
+   modules/home/dotfiles.nix).
+3. Rebuild (the first time, flakes may need enabling):
+
 **Gaming**
 
 ```
-sudo nixos-rebuild switch --flake .#nixostower
+sudo nixos-rebuild switch --flake .#nixostower --option experimental-features "nix-command flakes"
 ```
 
 **School/Work**
 
 ```
-sudo nixos-rebuild switch --flake .#nixoslaptop
+sudo nixos-rebuild switch --flake .#nixoslaptop --option experimental-features "nix-command flakes"
 ```
 
 ## Credits
