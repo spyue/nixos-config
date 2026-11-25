@@ -1,8 +1,8 @@
 # Spyue's NixOS Config
 
-blah blah
+![Desktop Screenshot](screenshots/desktop.png)
 
-screenshot of desktop
+This is my NixOS setup, keep in mind it is my first time using Linux other than a brief stint with Debian. Some things to note are there are wallpapers in here that are not mine, almost all of them are from wallhaven.cc. Take a look around and let me know if you have any suggestions or questions @spyue@proton.me or on discord @spyue. (I will eventually update this README to include more info)
 
 ## Basic Outline
 
