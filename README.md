@@ -12,6 +12,9 @@ This is my NixOS setup, keep in mind it is my first time using Linux other than 
 - **Dynamic theming by wallpaper:** a custom quickshell wallpaper picker runs matugen, upon selection apps such as hyprland, waybar, kitty, nvim, Firefox, Vesktop(discord), and more update their themes to match
 - **Graphical boot and lock:** plymouth splash for luks password followed by auto login and auto put into hyprlock screen (temp solution until custom quickshell login sequence)
 
+**Here is the lock screen it boots to:**
+![Lock Screen Gif](screenshots/lock.gif)
+
 ## Current Machines
 
 | Host          | Model                                        |
@@ -50,7 +53,7 @@ Configurations stay in dotfiles/ which are linked to ~/.config with mkOutOfStore
 
 ## Theme System
 
-![Wallpaper Picker Screenshot](screenshots/wallpickerSC.png)
+![Wallpaper Picker Gif](screenshots/picker.gif)
 
 Super+W brings up the wallpaper picker which previews the main color as you hover over each wallpaper. On selection awww sets the wallpaper and runs matugen. Matugen then generates a Material You palette from the image. Templates turn that palette into color files for each of the configured apps with post-hooks signaling running apps to reload to apply the theme. This allows the system to stay mostly color coordinated.
 
